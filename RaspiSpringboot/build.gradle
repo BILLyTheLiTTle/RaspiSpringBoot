@@ -2,7 +2,7 @@ buildscript {
 	ext {
 		kotlinVersion = '1.2.30'
 		springBootVersion = '2.0.0.RELEASE'
-		pi4jVersion = '1.1'
+		//pi4jVersion = '1.1'
 	}
 	repositories {
 		mavenCentral()
@@ -46,6 +46,6 @@ dependencies {
 	compile('com.fasterxml.jackson.module:jackson-module-kotlin')
 	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	compile("org.jetbrains.kotlin:kotlin-reflect")
-	compile ("com.pi4j:pi4j-core:$pi4jVersion")
+	//compile ("com.pi4j:pi4j-core:$pi4jVersion")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

@@ -5,6 +5,9 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		flatDir {
+			dirs 'lib'
+		}
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -41,6 +44,7 @@ repositories {
 
 
 dependencies {
+	compile fileTree(dir: 'lib', include: '*.jar')
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
 	compile('com.fasterxml.jackson.module:jackson-module-kotlin')
 	compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")

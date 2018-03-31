@@ -3,7 +3,7 @@ package raspring.raspi.controllers
 import com.pi4j.io.gpio.*
 
 class MotorController{
-    fun startMotor(){
+    @Synchronized fun startMotor(){
         val gpio = GpioFactory.getInstance();
         val pin4 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, "Pin4")
         val pin7 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_07, "Pin7")

@@ -13,8 +13,7 @@ class GreetingController {
     @GetMapping("/greeting")
     fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String): String {
 
-        val mc = MotorController()
-        mc.startMotor()
+        MotorController.startMotor()
 
         return "Hello, $name"
     }

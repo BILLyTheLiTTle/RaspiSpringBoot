@@ -20,6 +20,8 @@ class MotorController{
         pin4.low()
         pin7.low()
         gpio.shutdown()
+        gpio.unprovisionPin(pin4)
+        gpio.unprovisionPin(pin7)
         System.out.println("Stopped motor: ${gpio.isShutdown}")
 
         System.out.println("Setting to null")

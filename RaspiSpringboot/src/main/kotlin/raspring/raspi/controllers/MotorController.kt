@@ -6,8 +6,8 @@ object MotorController{
     @Synchronized fun startMotor(){
         val gpio = GpioFactory.getInstance();
         val pin4 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, "Pin4")
-        val pin7 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, "Pin7")
-        val pin8 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_07, "Pin8")
+        val pin7 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_07, "Pin7")
+        val pin8 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_08, "Pin8")
 
         pin4.setShutdownOptions(true, PinState.LOW, PinPullResistance.OFF)
         pin7.setShutdownOptions(true, PinState.LOW, PinPullResistance.OFF)

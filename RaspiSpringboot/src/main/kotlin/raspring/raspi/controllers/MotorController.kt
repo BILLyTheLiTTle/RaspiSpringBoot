@@ -14,7 +14,7 @@ object MotorController{
         pin8.setShutdownOptions(true, PinState.LOW, PinPullResistance.OFF)
 
         System.out.println("rotate motor clockwise for 6 seconds")
-        pin4.high()
+        pin4.low()
         pin7.high()
         pin8.high()
         Thread.sleep(6000)
